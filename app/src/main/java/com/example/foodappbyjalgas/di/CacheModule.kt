@@ -4,6 +4,7 @@ import androidx.room.Room
 import com.example.foodappbyjalgas.cache.DaoDatabase
 import com.example.foodappbyjalgas.cache.database.AppDatabase
 import com.example.foodappbyjalgas.network.model.RetrofitModelMapper
+
 import com.example.foodappbyjalgas.util.App
 import dagger.Module
 import dagger.Provides

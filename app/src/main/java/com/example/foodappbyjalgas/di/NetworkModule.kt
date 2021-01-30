@@ -2,6 +2,7 @@ package com.example.foodappbyjalgas.di
 
 import com.example.foodappbyjalgas.network.model.NetworkService
 import com.example.foodappbyjalgas.network.model.RetrofitModelMapper
+
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides

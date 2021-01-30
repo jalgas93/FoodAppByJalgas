@@ -2,9 +2,11 @@ package com.example.foodappbyjalgas.di
 
 import com.example.foodappbyjalgas.cache.DaoDatabase
 import com.example.foodappbyjalgas.cache.model.ModelDatabaseMapper
-import com.example.foodappbyjalgas.iteractors.GetRecipe
+
+import com.example.foodappbyjalgas.iteractors.MainRepository
 import com.example.foodappbyjalgas.network.model.NetworkService
 import com.example.foodappbyjalgas.network.model.RetrofitModelMapper
+
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,13 +18,13 @@ import javax.inject.Singleton
 object IteractorsModule {
     @Singleton
     @Provides
-    fun providesGetRecipe(
-            retrofitService: NetworkService,
-            retrofiMapper: RetrofitModelMapper,
-            roomDao: DaoDatabase,
-            roomMapper: ModelDatabaseMapper
-    ): GetRecipe {
-        return GetRecipe(
+    fun providesRepository(
+        retrofitService: NetworkService,
+        retrofiMapper: RetrofitModelMapper,
+        roomDao: DaoDatabase,
+        roomMapper: ModelDatabaseMapper
+    ): MainRepository {
+        return MainRepository(
                 retrofitService = retrofitService,
                 retrofitMapper = retrofiMapper,
                 roomDao = roomDao,

@@ -9,7 +9,7 @@ data class State<out T>(
         fun <T> Success(
                 data: T
         ): State<T> {
-            return Success(
+            return State(
                     data = data
             )
         }
@@ -17,8 +17,8 @@ data class State<out T>(
         fun <T> Error(
                 message: String
         ): State<T> {
-            return Companion.Error(
-                    message = message
+            return State(
+                    error = message
             )
 
         }

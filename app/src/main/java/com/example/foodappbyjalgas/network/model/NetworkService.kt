@@ -11,5 +11,5 @@ interface NetworkService {
     suspend fun get(
             @Header("Authorization") token: String,
             @Query("id") id: Int
-    )
+    ):RetrofitModel
 }
